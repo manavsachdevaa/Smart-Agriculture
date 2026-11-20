@@ -1,0 +1,30 @@
+{
+  "generated_at_utc": "2026-11-20T10:31:59.720220+00:00",
+  "incoming_data": "data/new_crop_yield.csv",
+  "incoming_rows": 80,
+  "historical_rows": 400,
+  "candidate_training_rows_after_deduplication": 437,
+  "evaluation_rows_from_incoming_batch": 24,
+  "champion_version": "1",
+  "champion_metrics": {
+    "mae": 0.4085769855693706,
+    "rmse": 0.7738865212698064,
+    "r2": 0.9991765084063804
+  },
+  "candidate_metrics": {
+    "mae": 0.39145142502828234,
+    "rmse": 0.8322512228795557,
+    "r2": 0.9990476129339888
+  },
+  "quality_gate": {
+    "primary_metric": "RMSE (lower is better)",
+    "guardrail": "Candidate R2 must be >= Champion R2",
+    "minimum_rmse_improvement": 0.0,
+    "rmse_improvement": -0.05836470160974927,
+    "decision": "RETAIN_EXISTING_CHAMPION",
+    "champion_alias_changed": false
+  },
+  "mlflow_candidate_run_id": "2d4b0284c866452187b0c4b81c209a26",
+  "candidate_artifact": "models\\candidate\\crop_yield_candidate.joblib",
+  "note": "Candidate is saved separately. This workflow never changes the Champion alias."
+}
